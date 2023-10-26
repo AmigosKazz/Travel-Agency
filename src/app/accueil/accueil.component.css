@@ -1,0 +1,62 @@
+.container{
+
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/image_accueil/Lemur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.accueil{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.menu{
+  display: flex;
+  gap: 3rem;
+  margin-top: 20px;
+}
+
+.menu-items a{
+  text-decoration: none;
+  color: #e4e9f7;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 540;
+}
+.menu-items a:hover{
+  background-color: #024376;
+  transition: 0.5s;
+
+}
+
+.recherche{
+
+  height: 1rem;
+  width: 10rem;
+  margin-top: 20px;
+  margin-right: 11rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+
+}
+.recherche input{
+  border: none;
+  background-color: #024376;
+  padding: 10px 15px;
+  border-radius: 18px;
+  color: white;
+}
+input::placeholder {
+  color: #e4e9f7;
+}
+
+.recherche i{
+  position: absolute;
+  right: 10rem;
+}
