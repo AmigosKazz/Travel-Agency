@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,700&family=Space+Grotesk:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
 .container{
 
   width: 100%;
@@ -19,14 +21,17 @@
   display: flex;
   gap: 3rem;
   margin-top: 20px;
+  margin-left: -24rem;
 }
 
 .menu-items a{
+  font-family: 'Iceland', sans-serif;
   text-decoration: none;
   color: #e4e9f7;
   padding: 10px 15px;
   border-radius: 10px;
-  font-weight: 540;
+  font-weight: 560;
+  font-size: 1.3em;
 }
 .menu-items a:hover{
   background-color: #024376;
@@ -35,28 +40,48 @@
 }
 
 .recherche{
-
   height: 1rem;
-  width: 10rem;
-  margin-top: 20px;
+  margin-top: 13px;
   margin-right: 11rem;
-  border-radius: 15px;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  background-color: #024376;
+  padding: 17px 30px;
+  border-radius: 18px;
 
 }
 .recherche input{
+  margin-right: 5px;
   border: none;
-  background-color: #024376;
-  padding: 10px 15px;
-  border-radius: 18px;
+  background-color: transparent;
   color: white;
 }
 input::placeholder {
   color: #e4e9f7;
 }
 
-.recherche i{
-  position: absolute;
-  right: 10rem;
+.recherche button {
+
+  border: none;
+  background-color: #024376;
+}
+
+.recherche button i{
+  padding: 8px;
+  color: #e4e9f7;
+}
+
+#text-acceuil{
+  width: 45%;
+  margin-top: 7rem;
+  margin-left: 7rem;
+}
+#text-acceuil p{
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 900;
+  font-size: 4em;
+  color: white;
+  text-transform: uppercase;
 }
