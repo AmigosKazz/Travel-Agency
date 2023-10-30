@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./voir-plus.component.css']
 })
 export class VoirPlusComponent {
-
+  
 }

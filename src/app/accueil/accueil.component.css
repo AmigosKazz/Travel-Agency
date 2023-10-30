@@ -17,7 +17,6 @@
   min-width: 100% ;
 }
 
-
 .menu{
   display: flex;
   gap: 2rem;
@@ -32,7 +31,7 @@
   padding: 10px 15px;
   border-radius: 10px;
   font-weight: 560;
-  font-size: 1.3em;
+  font-size: 1.3vw;
 }
 .menu-items a:hover{
   background-color: #024376;
@@ -82,14 +81,14 @@ input::placeholder {
 #text-acceuil p{
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 900;
-  font-size: 3.5em;
+  font-size: 3.5vw;
   color: white;
   text-transform: uppercase;
 }
 
 @media screen and (max-width: 1285px){
   #text-acceuil p{
-    font-size: 3em;
+    font-size: 3.7vw;
   }
   .menu{
     width: 60%;
@@ -99,10 +98,10 @@ input::placeholder {
 
 @media screen and (max-width: 1020px) {
   #text-acceuil p{
-    font-size: 2.6em;
+    font-size: 3.2vw;
   }
   .menu-items a{
-    font-size: 1.1em;
+    font-size: 1.1vw;
     padding: 7px 12px;
   }
 
@@ -118,8 +117,10 @@ input::placeholder {
     }
   }
 }
+
   @media screen and (max-width: 576px) {
   .menu {
+    width: 90%;
     gap: 0.3rem;
   }
 }
