@@ -37,6 +37,12 @@
   text-align: justify;
 }
 
+#video-sec{
+  width: 100%;
+  height: auto;
+}
+
+
 @media screen and (max-width: 1120px) {
   #text-section, #text-section-2{
     font-size: 1.5vw;
@@ -66,3 +72,4 @@
     font-size: 1.9vw;
   }
 }
+
