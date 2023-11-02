@@ -19,4 +19,6 @@ import { VoirPlusComponent } from './voir-plus/voir-plus.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
