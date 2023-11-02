@@ -96,6 +96,7 @@ input::placeholder {
   }
 }
 
+
 @media screen and (max-width: 1020px) {
   #text-acceuil p{
     font-size: 3.2vw;

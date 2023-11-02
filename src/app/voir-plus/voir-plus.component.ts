@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit} from '@angular/core';
 import * as AOS from 'aos';
+import {HousingLocation} from "../housing-location";
 
 @Component({
   selector: 'app-voir-plus',
@@ -12,10 +13,10 @@ export class VoirPlusComponent implements AfterViewInit,OnInit {
     AOS.init();
   }
 
-  constructor(private el: ElementRef) {}
-  ngAfterViewInit(){
-    const videoElement:HTMLVideoElement = this.el.nativeElement.querySelector('video');
-    videoElement.muted = true;
+
+
+    ngAfterViewInit(){
+
   }
 
 }
