@@ -66,8 +66,8 @@
   background-attachment: fixed;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
+  height: 200vh;
+  overflow: hidden;
 }
 #title-section4{
   text-align: center;
@@ -80,8 +80,47 @@
 #icon-maki{
   position: absolute;
   right: 0;
-  width: 200px;
+  top: 100rem;
+  width: 100px;
+}
 
+.container-image{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 2vw;
+  overflow: hidden;
+}
+.image-items{
+  box-sizing: border-box;
+  width: 40%;
+  height: 30vw;
+  margin: 2rem auto;
+  overflow: hidden;
+  border: 1px solid #214798;
+  text-align: center;
+}
+.image-items:hover {
+  box-shadow: 41px -11px 60px -2px rgba(0,0,0,0.85);
+  -webkit-box-shadow: 41px -11px 60px -2px rgba(0,0,0,0.85);
+  -moz-box-shadow: 41px -11px 60px -2px rgba(0,0,0,0.85);
+}
+
+.image-items img{
+    width: 100%;
+    margin-top: 3rem;
+}
+.image-items img:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.image-items h3{
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5vw;
+  color: #dad7d7;
+  margin-top: 1rem;
+  text-shadow: 9px -1px 6px rgba(0,0,0,0.61);
 }
 
 @media screen and (max-width: 1120px) {
