@@ -32,13 +32,18 @@
   <img src="../../assets/ilustration/maki.png" alt="" id="icon-maki" data-aos="fade-up">
 
   <div class="container-image">
-    <div class="image-items" *ngFor="let image of imageListe">
+    <div class="image-items" *ngFor="let image of paginatedListe">
       <h3> {{ image.title }} </h3>
       <p> {{ image.description }} </p>
       <img [src]="image.imageUrl" alt=" {{ image.title }} ">
       <p> Emplacement : {{ image.location }} </p>
     </div>
 
+  </div>
+
+  <div class="pagination">
+    <button (click)="previousPage()">Précédent</button>
+    <button (click)="nextPage()">Suivant</button>
   </div>
 
 </div>

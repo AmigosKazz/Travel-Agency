@@ -29,6 +29,36 @@ export class ImageListeService{
       description: 'Parc National d\'Andasibe Mantadia',
       imageUrl: './assets/image_accueil/tourisme.jpg',
       location: 'Moramanga'
+    },
+    {
+      title: 'Ankarana',
+      description: 'Parc National de l\'Ankarana',
+      imageUrl: './assets/image_accueil/ankarana.jpg',
+      location: 'Antsiranana'
+    },
+    {
+      title: 'Ankarafantsika',
+      description: 'Parc National d\'Ankarafantsika',
+      imageUrl: './assets/image_accueil/ankarafantsika.jpg',
+      location: 'Mahajanga'
+    },
+    {
+      title: 'Zombitse',
+      description: 'Parc National de Zombitse Vohibasia',
+      imageUrl: './assets/image_accueil/zombitse.jpg',
+      location: 'Toliara'
+    },
+    {
+      title: 'Kirindy',
+      description: 'Parc National de Kirindy Mitea',
+      imageUrl: './assets/image_accueil/kirindy.jpg',
+      location: 'Morondava'
+    },
+    {
+      title: 'Tsimanampetsotsa',
+      description: 'Parc National de Tsimanampetsotsa',
+      imageUrl: './assets/image_accueil/tsimanampetsotsa.jpg',
+      location: 'Toliara'
     }
   ]
 

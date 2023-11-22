@@ -77,6 +77,26 @@
   color: #dad7d7;
 }
 
+.section4 button{
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.section4 button:hover{
+  background-color: #0056b3;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
 #icon-maki{
   position: absolute;
   right: 0;
@@ -93,12 +113,12 @@
 }
 .image-items{
   box-sizing: border-box;
-  width: 40%;
-  height: 30vw;
+  width: 30%;
+  height: 22vw;
   margin: 2rem auto;
   overflow: hidden;
-  border: 1px solid #214798;
   text-align: center;
+  background-color: #8d8d8d;
 }
 .image-items:hover {
   box-shadow: 41px -11px 60px -2px rgba(0,0,0,0.85);
@@ -108,19 +128,26 @@
 
 .image-items img{
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 }
 .image-items img:hover{
   transform: scale(1.1);
   transition: 0.5s;
 }
 
-.image-items h3{
+.image-items h3, .image-items p {
   font-family: 'Abel', sans-serif;
-  font-size: 1.5vw;
   color: #dad7d7;
   margin-top: 1rem;
   text-shadow: 9px -1px 6px rgba(0,0,0,0.61);
+}
+
+.image-items h3 {
+  font-size: 1.5vw;
+}
+
+.image-items p {
+  font-size: 1.2vw;
 }
 
 @media screen and (max-width: 1120px) {
