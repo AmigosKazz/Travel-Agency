@@ -60,6 +60,5 @@ export class ImageListeService{
       imageUrl: './assets/image_accueil/tsimanampetsotsa.jpg',
       location: 'Toliara'
     }
-  ]
-
+  ];
 }
