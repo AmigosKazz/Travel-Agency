@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { VoirPlusComponent } from './voir-plus/voir-plus.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashbordComponent,
     AccueilComponent,
-    VoirPlusComponent
+    VoirPlusComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
