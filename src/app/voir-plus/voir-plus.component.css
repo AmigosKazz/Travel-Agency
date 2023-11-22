@@ -77,28 +77,17 @@
   color: #dad7d7;
 }
 
-.section4 button{
-  font-family: 'Iceland', sans-serif;
-  text-decoration: none;
-  color: #e4e9f7;
-  padding: 10px 15px;
-  border-radius: 10px;
-  border: none;
-  font-weight: 560;
-  font-size: 1.3vw;
-  background-color: #024376;
-  cursor: pointer;
-  margin-left: 2rem;
-}
-.section4 button:hover{
-  background-color: #e4e9f7;
-  color: #024376;
-  transition: 0.5s;
-}
+
 .pagination{
   display: flex;
   justify-content: center;
   margin: 2rem;
+}
+
+.pagination img{
+  width: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
 }
 
 #icon-maki{

@@ -10,6 +10,15 @@
   overflow-x: hidden;
 }
 
+.scroll-to-top {
+  position: fixed;
+  display: block;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
 .accueil{
   display: flex;
   flex-direction: row;
