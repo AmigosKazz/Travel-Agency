@@ -6,6 +6,9 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { VoirPlusComponent } from './voir-plus/voir-plus.component';
 import { FooterComponent } from './footer/footer.component';
+import {AppRoutingModule} from "./app-routing.module";
+import { LoginComponent } from './login/login.component';
+import { ShowPageComponent } from './show-page/show-page.component';
 
 @NgModule({
   declarations: [
@@ -13,10 +16,12 @@ import { FooterComponent } from './footer/footer.component';
     DashbordComponent,
     AccueilComponent,
     VoirPlusComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent,
+    ShowPageComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

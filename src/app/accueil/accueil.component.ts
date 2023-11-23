@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-accueil',
@@ -6,6 +7,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
   styleUrls: ['./accueil.component.css']
 })
 export class AccueilComponent implements OnInit{
+  
   showScrollToTop = false;
 
   @HostListener('window:scroll', [])
