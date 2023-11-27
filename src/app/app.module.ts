@@ -12,6 +12,7 @@ import { ShowPageComponent } from './show-page/show-page.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { InscriptionComponent } from './inscription/inscription.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { InscriptionComponent } from './inscription/inscription.component';
     LoginComponent,
     ShowPageComponent,
     InscriptionComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule

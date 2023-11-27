@@ -7,8 +7,7 @@ import {NgForm} from "@angular/forms";
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent {
-  destinations = ['Ranomafana', 'Isalo', 'Andringitra',
-    'Ankarafantsika', 'Tsingy de Bemaraha','Andringitra','Ankarana'];
+  roles = ['Agence de voyage','Visiteur'];
 
   onSubmit(form: NgForm) {
     console.log(form.value);

@@ -1,0 +1,50 @@
+.reservation{
+  background-color: #6d6db6;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background-color: #024376;
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "JetBrains Mono Light", monospace;
+  width: 35%;
+}
+button:hover {
+  background-color: #e4e9f7;
+  color: #024376;
+  transition: 0.5s;
+}

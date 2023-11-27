@@ -1,0 +1,41 @@
+<div class="reservation">
+  <h1 id="title_inscript">Resrvation</h1>
+  <form #inscriptionForm="ngForm" (ngSubmit)="onSubmit(inscriptionForm)">
+
+    <div class="form-group">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label for="destination">Destination :</label>
+      <select id="destination" name="destination" ngModel>
+        <option *ngFor="let destination of destinations" [value]="destination">{{destination}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="departureDate">Date de départ :</label>
+      <input type="date" id="departureDate" name="departureDate" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label for="arrivalDate">Date d'arrivée :</label>
+      <input type="date" id="arrivalDate" name="arrivalDate" ngModel>
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfPeople">Nombre de personnes :</label>
+      <input type="number" id="numberOfPeople" name="numberOfPeople" ngModel>
+    </div>
+
+    <button type="submit">S'inscrire</button>
+
+  </form>
+</div>
+
