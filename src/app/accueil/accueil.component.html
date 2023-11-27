@@ -3,10 +3,10 @@
     <img src="/assets/image_accueil/icons.png" width="80px" data-aos="fade-up" data-aos-duration="1000">
     <div class="menu" data-aos="fade-up"
          data-aos-duration="1000">
-      <div class="menu-items"><a href="#"(click)="scrollToElement('container')" >ACCUEIL</a></div>
-      <div class="menu-items"><a href="#"(click)="scrollToElement('section4')">VOIR+</a></div>
-      <div class="menu-items"><a href="#">RESERVATION</a></div>
-      <div class="menu-items"><a href="#"(click)="scrollToElement('footer')">CONTACT</a></div>
+      <div class="menu-items"><a (click)="scrollToElement('container')" >ACCUEIL</a></div>
+      <div class="menu-items"><a (click)="scrollToElement('section4')">VOIR+</a></div>
+      <div class="menu-items"><a>RESERVATION</a></div>
+      <div class="menu-items"><a (click)="scrollToElement('footer')">CONTACT</a></div>
     </div>
     <div class="recherche" data-aos="fade-left"
          data-aos-duration="1000">
@@ -29,5 +29,3 @@
 
   <img class="scroll-to-top" src="assets/icon/up.png" (click)="scrollToElement('container')" *ngIf="showScrollToTop" >
 </div>
-
-

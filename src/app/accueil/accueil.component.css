@@ -41,6 +41,7 @@
   border-radius: 10px;
   font-weight: 560;
   font-size: 1.3vw;
+  cursor: pointer;
 }
 .menu-items a:hover{
   background-color: #024376;

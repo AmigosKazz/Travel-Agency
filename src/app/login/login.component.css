@@ -1,0 +1,132 @@
+.formulaire{
+  background-color: #6d6db6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+}
+
+.form-log{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 3rem;
+  padding: 5rem;
+  width: 50%;
+}
+
+.form-log h1{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10rem;
+  gap: 2rem;
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.name label{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  color: white;
+}
+.name input{
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 60%;
+}
+
+.password{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.password label{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  color: white;
+}
+.password input{
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 60%;
+}
+
+
+.form-log button{
+  background-color: #024376;
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "JetBrains Mono Light", monospace;
+  width: 35%;
+}
+.form-log button:hover{
+  background-color: #e4e9f7;
+  color: #024376;
+  transition: 0.5s;
+}
+
+
+.link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .admin_link{
+    font-family: "JetBrains Mono Light", monospace;
+    font-size: 1rem;
+    color: #024376;
+  }
+  .admin_link:hover{
+    color: #000000;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+
+  .inscrire_link{
+    font-family: "JetBrains Mono Light", monospace;
+    font-size: 1rem;
+    color: #024376;
+  }
+  .inscrire_link:hover{
+    color: #000000;
+    transition: 0.5s;
+    text-decoration: none;
+  }
+}

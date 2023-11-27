@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { LoginComponent } from './login/login.component';
 import { ShowPageComponent } from './show-page/show-page.component';
+import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { ShowPageComponent } from './show-page/show-page.component';
     ShowPageComponent,
   ],
   imports: [
-    BrowserModule, AppRoutingModule
+    BrowserModule, AppRoutingModule, FormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
