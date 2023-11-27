@@ -27,7 +27,7 @@ export class ImageListeService{
     {
       title: 'Andasibe',
       description: 'Parc National d\'Andasibe Mantadia',
-      imageUrl: './assets/image_accueil/tourisme.jpg',
+      imageUrl: './assets/image_accueil/andasibe.jpg',
       location: 'Moramanga'
     },
     {
@@ -59,6 +59,24 @@ export class ImageListeService{
       description: 'Parc National de Tsimanampetsotsa',
       imageUrl: './assets/image_accueil/tsimanampetsotsa.jpg',
       location: 'Toliara'
+    },
+    {
+      title: 'Marojejy',
+      description: 'Parc National de Marojejy',
+      imageUrl: './assets/image_accueil/marojejy.jpg',
+      location: 'Sambava'
+    },
+    {
+      title: 'Masoala',
+      description: 'Parc National de Masoala',
+      imageUrl: './assets/image_accueil/masoala.jpg',
+      location: 'Maroantsetra'
+    },
+    {
+      title: 'Makira',
+      description: 'Parc National de Makira',
+      imageUrl: './assets/image_accueil/makira.jpg',
+      location: 'Toamasina'
     }
   ];
 }

@@ -1,5 +1,8 @@
 <div class="formulaire">
 
+  <div class="logo">
+    <img src="assets/icon/arrow-left.png" alt="logo" title="home" routerLink="/">
+  </div>
 
 
   <form class="form-log" #loginFrom = "ngForm" (ngSubmit)="onSubmit(loginFrom)">
@@ -17,8 +20,6 @@
         <input type="password" id="password" name="password" ngModel>
       </div>
 
-
-
       <button type="submit">Se connecter</button>
     </div>
 
@@ -28,7 +29,6 @@
   </div>
 
   </form>
-
 
 </div>
 
