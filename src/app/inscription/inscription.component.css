@@ -38,12 +38,25 @@ form {
   margin-bottom: 1rem;
 }
 
+.form-group select{
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 60%;
+}
+
 .form-group label{
   font-family: "JetBrains Mono Light", monospace;
   font-size: 1.2rem;
   color: white;
 }
-
 
 label {
   display: block;
@@ -54,17 +67,21 @@ input[type="text"],
 input[type="email"],
 input[type="roles"],
 input[type="password"] {
-  width: 70%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  padding-left: 2rem;
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 60%;
 }
 
 #role{
   width: 70%;
-  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -87,4 +104,21 @@ button:hover {
   background-color: #e4e9f7;
   color: #024376;
   transition: 0.5s;
+}
+
+.link{
+  margin-left: 8rem;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .admin_link{
+    font-family: "JetBrains Mono Light", monospace;
+    font-size: 1rem;
+    color: #024376;
+  }
+  .admin_link:hover{
+    color: #000000;
+    transition: 0.5s;
+    text-decoration: none;
+  }
 }

@@ -27,7 +27,7 @@
   margin-top: 2rem;
   gap: 3rem;
   padding: 5rem;
-  width: 50%;
+  width: 60%;
 }
 
 .form-log h1{
@@ -35,13 +35,32 @@
   font-size: 3rem;
   color: white;
   text-align: center;
+  margin-right: 6rem;
 }
 .form-group{
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 10rem;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.form-group select{
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 60%;
+}
+.form-group label{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  color: white;
 }
 
 .name{
@@ -106,6 +125,8 @@
   cursor: pointer;
   font-family: "JetBrains Mono Light", monospace;
   width: 35%;
+  margin-top: 2rem;
+  margin-left: 4rem;
 }
 .form-log button:hover{
   background-color: #e4e9f7;
@@ -113,24 +134,10 @@
   transition: 0.5s;
 }
 
-
 .link{
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-
-  .admin_link{
-    font-family: "JetBrains Mono Light", monospace;
-    font-size: 1rem;
-    color: #024376;
-  }
-  .admin_link:hover{
-    color: #000000;
-    transition: 0.5s;
-    text-decoration: none;
-  }
+  margin-right: 5rem;
 
   .inscrire_link{
     font-family: "JetBrains Mono Light", monospace;
@@ -143,3 +150,4 @@
     text-decoration: none;
   }
 }
+

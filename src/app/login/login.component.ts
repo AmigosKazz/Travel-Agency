@@ -10,6 +10,8 @@ import {LoginService} from "./service/login.service";
 export class LoginComponent {
   private router: any;
 
+  roles = ['Agence de voyage','Visiteur'];
+
   constructor(private loginService: LoginService) {
 
   }

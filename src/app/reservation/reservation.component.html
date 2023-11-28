@@ -1,7 +1,12 @@
 <div class="reservation">
-  <h1 id="title_inscript">Resrvation</h1>
+
+  <div class="logo">
+    <img src="assets/icon/arrow-left.png" alt="logo" title="home" routerLink="/">
+  </div>
+
   <form #inscriptionForm="ngForm" (ngSubmit)="onSubmit(inscriptionForm)">
 
+    <h1 id="title_reserv">Reservation</h1>
     <div class="form-group">
       <label for="name">Nom :</label>
       <input type="text" id="name" name="name" ngModel>
@@ -34,7 +39,7 @@
       <input type="number" id="numberOfPeople" name="numberOfPeople" ngModel>
     </div>
 
-    <button type="submit">S'inscrire</button>
+    <button type="submit">Reserver</button>
 
   </form>
 </div>
