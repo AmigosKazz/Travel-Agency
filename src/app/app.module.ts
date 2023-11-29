@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { DashbordComponent } from './dashbord/dashbord.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { VoirPlusComponent } from './voir-plus/voir-plus.component';
 import { FooterComponent } from './footer/footer.component';
@@ -13,11 +12,12 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ReservationComponent } from './reservation/reservation.component';
+import { DashboardAgenceComponent } from './dashboard-agence/dashboard-agence.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashbordComponent,
     AccueilComponent,
     VoirPlusComponent,
     FooterComponent,
@@ -25,6 +25,7 @@ import { ReservationComponent } from './reservation/reservation.component';
     ShowPageComponent,
     InscriptionComponent,
     ReservationComponent,
+    DashboardAgenceComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule
