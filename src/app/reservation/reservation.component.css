@@ -6,10 +6,16 @@
   height: 100vh;
   width: 100%;
 }
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo img{;
   width: 50%;
-  margin-top: 7rem;
-  margin-left: 2rem;
+  margin-top: 6rem;
+  margin-left: 5rem;
   cursor: pointer;
 }
 
@@ -30,12 +36,25 @@
 form {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 10rem;
   padding: 1rem;
 }
 
 .form-group {
   margin-bottom: 1rem;
+}
+
+.form-group select{
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 60%;
 }
 
 label {
@@ -47,11 +66,25 @@ input[type="text"],
 input[type="email"],
 input[type="date"],
 input[type="number"] {
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
   width: 95%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
+
+.form-group label{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  color: white;
+}
+
 button {
   margin-top: 3rem;
   background-color: #024376;
@@ -72,7 +105,6 @@ button:hover {
 }
 #destination{
   width: 95%;
-  padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
