@@ -13,6 +13,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { DashboardAgenceComponent } from './dashboard-agence/dashboard-agence.component';
+import { NavbarComponent } from './dashboard-agence/navbar/navbar.component';
+import { ShowContentComponent } from './dashboard-agence/show-content/show-content.component';
+import { ResevationManagerComponent } from './dashboard-agence/resevation-manager/resevation-manager.component';
 
 
 @NgModule({
@@ -26,6 +29,9 @@ import { DashboardAgenceComponent } from './dashboard-agence/dashboard-agence.co
     InscriptionComponent,
     ReservationComponent,
     DashboardAgenceComponent,
+    NavbarComponent,
+    ShowContentComponent,
+    ResevationManagerComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule
