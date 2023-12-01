@@ -14,11 +14,13 @@ const routes: Routes = [
   { path: '', component: ShowPageComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'reservation', component: ReservationComponent},
-  { path: 'dashboard', component: ShowContentComponent},
-  { path: 'reservation-management', component: ResevationManagerComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'tableau-bord', component: TableauBordComponent},
-  { path: '', redirectTo: '/table-bord', pathMatch: 'full'}
+  { path: 'dashboard', component: ShowContentComponent,
+    children: [
+      { path: 'tableau-bord', component: TableauBordComponent },
+      { path: 'reservation', component: ResevationManagerComponent },
+      { path: 'user', component: UserComponent}
+    ]
+  },
 ];
 
 @NgModule({
@@ -32,3 +34,4 @@ const routes: Routes = [
 export class AppRoutingModule {
 
 }
+
