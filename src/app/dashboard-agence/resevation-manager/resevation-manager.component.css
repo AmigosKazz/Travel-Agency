@@ -1,0 +1,43 @@
+.container{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+.head{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.head h1{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+table.customTable {
+  width: 100%;
+  max-height: calc(4em * 5); /* 5 rows */
+  overflow-y: auto;
+  display: block;
+  background-color: #B0B0B0;
+  border-collapse: collapse;
+  border-width: 0;
+  border-color: #000000;
+  border-style: solid;
+  color: #000000;
+}
+
+table.customTable td, table.customTable th {
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+table.customTable thead {
+  background-color: #004F83;
+}

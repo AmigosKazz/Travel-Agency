@@ -18,6 +18,7 @@ import { ShowContentComponent } from './dashboard-agence/show-content/show-conte
 import { ResevationManagerComponent } from './dashboard-agence/resevation-manager/resevation-manager.component';
 import { TableauBordComponent } from './dashboard-agence/tableau-bord/tableau-bord.component';
 import { UserComponent } from './dashboard-agence/user/user.component';
+import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/accueil-dashboard.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { UserComponent } from './dashboard-agence/user/user.component';
     ResevationManagerComponent,
     TableauBordComponent,
     UserComponent,
+    AccueilDashboardComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule
