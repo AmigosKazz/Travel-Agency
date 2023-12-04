@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {NgForm} from "@angular/forms";
+import {InscriptionService} from "./service/InscriptionService";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-inscription',
@@ -9,7 +11,21 @@ import {NgForm} from "@angular/forms";
 export class InscriptionComponent {
   roles = ['Agence de voyage','Visiteur'];
 
-  onSubmit(form: NgForm) {
-    console.log(form.value);
+  constructor(private inscriptionService: InscriptionService, private router: Router) {
+
   }
+
+  onSubmit(form: NgForm) {
+    this.inscriptionService.sendInscription(form.value).subscribe(
+      (response) => {
+        console.log(response);
+        this.router.navigate(['/login']);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  protected readonly NgForm = NgForm;
 }
