@@ -19,7 +19,7 @@ export class InscriptionComponent {
     this.inscriptionService.sendInscription(form.value).subscribe(
       (response) => {
         console.log(response);
-        this.router.navigate(['/login']);
+        this.router.navigate(['/login']).then(r => console.log(r));
       },
       (error) => {
         console.log(error);

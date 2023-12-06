@@ -23,7 +23,7 @@ table.customTable {
   max-height: calc(4em * 5); /* 5 rows */
   overflow-y: auto;
   display: block;
-  background-color: #B0B0B0;
+  background-color: rgba(193, 192, 192, 0.76);
   border-collapse: collapse;
   border-width: 0;
   border-color: #000000;
@@ -37,7 +37,58 @@ table.customTable td, table.customTable th {
   border-style: solid;
   padding: 1rem 2rem 1rem 2rem;
 }
+table.customTable td:hover {
+  background-color: #B0B0B0;
+  cursor: pointer;
+}
+
 
 table.customTable thead {
   background-color: #004F83;
+  color: white;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-accepter{
+  background-color: #009d19;
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "JetBrains Mono Light", monospace;
+  width: 12%;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+.btn-accepter:hover{
+  background-color: #014d0e;
+  color: white;
+  transition: 0.5s;
+}
+
+.btn-refuser{
+  background-color: #a90202;
+  border: none;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "JetBrains Mono Light", monospace;
+  width: 12%;
+  margin-top: 2rem;
+  margin-left: 4rem;
+}
+.btn-refuser:hover{
+  background-color: #871730;
+  color: white;
+  transition: 0.5s;
 }
