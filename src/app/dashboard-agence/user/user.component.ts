@@ -8,9 +8,5 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
 
-  showForm = false;
 
-  toogleForm() {
-    this.showForm = !this.showForm;
-  }
 }

@@ -4,6 +4,7 @@
   justify-content: center;
   gap: 5rem;
   margin-top: 4rem;
+  overflow-x: hidden;
 }
 .head{
   display: flex;
