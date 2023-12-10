@@ -9,13 +9,12 @@ import {LoginService} from "./service/login.service";
 })
 export class LoginComponent {
   private router: any;
-
   roles = ['Agence de voyage','Visiteur'];
 
   constructor(private loginService: LoginService) {
-
+    
   }
-
+  
   onSubmit(form : NgForm) {
     if (form.valid) {
       this.loginService.login(form.value).subscribe(
@@ -29,5 +28,4 @@ export class LoginComponent {
       );
     }
   }
-
 }

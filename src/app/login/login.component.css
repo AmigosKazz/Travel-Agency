@@ -1,13 +1,13 @@
-.formulaire{
+.formulaire {
   background-color: #6d6db6;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
-  width: 100%;
+  max-width: auto;
 }
 
-.logo img{
+.logo img {
   width: 50%;
   margin-top: 7rem;
   margin-bottom: 2rem;
@@ -21,7 +21,7 @@
   opacity: 0.7;
 }
 
-.form-log{
+.form-log {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,14 +31,14 @@
   width: 60%;
 }
 
-.form-log h1{
+.form-log h1 {
   font-family: "JetBrains Mono Light", monospace;
   font-size: 3rem;
   color: white;
   text-align: center;
   margin-right: 6rem;
 }
-.form-group{
+.form-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +46,7 @@
   gap: 1rem;
 }
 
-.form-group select{
+.form-group select {
   border: none;
   background-color: #eceaea;
   border-radius: 5px;
@@ -58,24 +58,24 @@
   height: 2rem;
   width: 60%;
 }
-.form-group label{
+.form-group label {
   font-family: "JetBrains Mono Light", monospace;
   font-size: 1.2rem;
   color: white;
 }
 
-.name{
+.name {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
 }
-.name label{
+.name label {
   font-family: "JetBrains Mono Light", monospace;
   font-size: 1.2rem;
   color: white;
 }
-.name input{
+.name input {
   border: none;
   background-color: #eceaea;
   border-radius: 5px;
@@ -89,18 +89,18 @@
   width: 60%;
 }
 
-.password{
+.password {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
 }
-.password label{
+.password label {
   font-family: "JetBrains Mono Light", monospace;
   font-size: 1.2rem;
   color: white;
 }
-.password input{
+.password input {
   border: none;
   background-color: #eceaea;
   border-radius: 5px;
@@ -114,8 +114,7 @@
   width: 60%;
 }
 
-
-.form-log button{
+.form-log button {
   background-color: #024376;
   border: none;
   color: white;
@@ -129,26 +128,25 @@
   margin-top: 2rem;
   margin-left: 4rem;
 }
-.form-log button:hover{
+.form-log button:hover {
   background-color: #e4e9f7;
   color: #024376;
   transition: 0.5s;
 }
 
-.link{
+.link {
   display: flex;
   justify-content: center;
   margin-right: 5rem;
 
-  .inscrire_link{
+  .inscrire_link {
     font-family: "JetBrains Mono Light", monospace;
     font-size: 1rem;
     color: #024376;
   }
-  .inscrire_link:hover{
+  .inscrire_link:hover {
     color: #000000;
     transition: 0.5s;
     text-decoration: none;
   }
 }
-

@@ -1,1 +1,20 @@
-<p>user works!</p>
+<form>
+  <!-- Display agency information -->
+  <div>
+    <label for="agencyName">nom de l'agence:</label>
+    <input type="text" id="agencyName" name="agencyName" readonly />
+  </div>
+  <div>
+    <label for="agencyAddress">Agency :</label>
+    <input type="text" id="agencyAddress" name="agencyAddress" readonly />
+  </div>
+
+  <div>
+    <label for="">mot de passe:</label>
+    <input type="password" id="password" name="agencyPassword" readonly />
+  </div>
+
+  <button (click)="toogleForm()" >Modifer les informations</button>
+  <button>Supprimer le compte</button>
+
+</form>

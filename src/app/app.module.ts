@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -19,6 +20,7 @@ import { ResevationManagerComponent } from './dashboard-agence/resevation-manage
 import { TableauBordComponent } from './dashboard-agence/tableau-bord/tableau-bord.component';
 import { UserComponent } from './dashboard-agence/user/user.component';
 import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/accueil-dashboard.component';
+import { ModifyUserDialogComponent } from './dashboard-agence/user/modify-user-dialog/modify-user-dialog.component';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/
     TableauBordComponent,
     UserComponent,
     AccueilDashboardComponent,
+    ModifyUserDialogComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule
