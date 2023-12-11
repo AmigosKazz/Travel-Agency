@@ -19,6 +19,10 @@ import { ResevationManagerComponent } from './dashboard-agence/resevation-manage
 import { TableauBordComponent } from './dashboard-agence/tableau-bord/tableau-bord.component';
 import { UserComponent } from './dashboard-agence/user/user.component';
 import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/accueil-dashboard.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { UserDialogComponent } from './dashboard-agence/user/user-dialog/user-dialog.component';
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 
 @NgModule({
@@ -38,12 +42,13 @@ import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/
     TableauBordComponent,
     UserComponent,
     AccueilDashboardComponent,
+    UserDialogComponent,
   ],
   imports: [
-    BrowserModule, AppRoutingModule, FormsModule, HttpClientModule
+    BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, MatDialogModule, MatButtonModule, MatIconModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, AccueilComponent, VoirPlusComponent, FooterComponent, LoginComponent, ShowPageComponent, InscriptionComponent, ReservationComponent, DashboardAgenceComponent, NavbarComponent, ShowContentComponent, ResevationManagerComponent, TableauBordComponent, UserComponent, AccueilDashboardComponent, UserDialogComponent]
 })
 export class AppModule {
 

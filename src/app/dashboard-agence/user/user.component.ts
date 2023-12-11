@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {UserDialogComponent} from "./user-dialog/user-dialog.component";
 
 @Component({
   selector: 'app-user',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./user.component.css'],
 })
 export class UserComponent {
+  isEditable = false;
+  diable = true;
+  toogleEdit() {
+    this.isEditable = !this.isEditable;
+  }
+
+  diableButton() {
+    this.diable = !this.diable;
+  }
 
 
 }
