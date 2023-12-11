@@ -25,7 +25,7 @@
       <div class="form-group">
         <label for="password">Mot de passe</label>
         <div style="position: relative">
-          <input [readOnly]="isEditable" type="password" id="password" name="password" placeholder="Mot de passe" readonly>
+          <input [readOnly]="!isEditable" type="password" id="password" name="password" placeholder="Mot de passe" readonly>
           <i id="edit3" class='bx bxs-edit-alt' (click)="isEditable = !isEditable"></i>
         </div>
 

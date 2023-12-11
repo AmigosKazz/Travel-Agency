@@ -20,7 +20,6 @@ import { TableauBordComponent } from './dashboard-agence/tableau-bord/tableau-bo
 import { UserComponent } from './dashboard-agence/user/user.component';
 import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/accueil-dashboard.component';
 import {MatDialogModule} from "@angular/material/dialog";
-import { UserDialogComponent } from './dashboard-agence/user/user-dialog/user-dialog.component';
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 
@@ -42,13 +41,12 @@ import {MatIconModule} from "@angular/material/icon";
     TableauBordComponent,
     UserComponent,
     AccueilDashboardComponent,
-    UserDialogComponent,
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, MatDialogModule, MatButtonModule, MatIconModule
   ],
   providers: [],
-  bootstrap: [AppComponent, AccueilComponent, VoirPlusComponent, FooterComponent, LoginComponent, ShowPageComponent, InscriptionComponent, ReservationComponent, DashboardAgenceComponent, NavbarComponent, ShowContentComponent, ResevationManagerComponent, TableauBordComponent, UserComponent, AccueilDashboardComponent, UserDialogComponent]
+  bootstrap: [AppComponent, AccueilComponent, VoirPlusComponent, FooterComponent, LoginComponent, ShowPageComponent, InscriptionComponent, ReservationComponent, DashboardAgenceComponent, NavbarComponent, ShowContentComponent, ResevationManagerComponent, TableauBordComponent, UserComponent, AccueilDashboardComponent]
 })
 export class AppModule {
 

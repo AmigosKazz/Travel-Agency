@@ -1,6 +1,4 @@
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {UserDialogComponent} from "./user-dialog/user-dialog.component";
 
 @Component({
   selector: 'app-user',
@@ -17,6 +15,5 @@ export class UserComponent {
   diableButton() {
     this.diable = !this.diable;
   }
-
 
 }
