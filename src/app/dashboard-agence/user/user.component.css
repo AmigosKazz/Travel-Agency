@@ -1,4 +1,99 @@
-form {
-  margin-left: 25rem;
+.container{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.img-user {
+  text-align: center;
+  margin-right: 30rem;
+}
+.img-user p {
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 1.2rem;
+}
+.img-user img {
+  width: 120px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40rem;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+.form-group label{
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  color: #000000;
+  margin-top: 1.2rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: none;
+  background-color: #eceaea;
+  border-radius: 5px;
+  color: black;
+  padding-left: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid white;
+  font-family: "JetBrains Mono Light", monospace;
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 150%;
+}
+.btn{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn #btn-modif{
+  background-color: #4b8e0c;
+  border: none;
+  color: white;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "JetBrains Mono Light", monospace;
+  width: 35%;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.btn #btn-modif:hover{
+  background-color: #e4e9f7;
+  color: #4fae04;
+  transition: 0.5s;
+}
+.btn #btn-suppr{
+  background-color: #9b0505;
+  border: none;
+  color: white;
+  padding: 0.9rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "JetBrains Mono Light", monospace;
+  width: 35%;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.btn #btn-suppr:hover{
+  background-color: #e4e9f7;
+  color: #9b0505;
+  transition: 0.5s;
 }
