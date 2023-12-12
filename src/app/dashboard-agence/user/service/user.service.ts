@@ -13,6 +13,7 @@ export class UserService {
   constructor( private http: HttpClient) {}
 
   public getUser() : Observable<User[]> {
-    return this.http.get<any>(`${this.apiServerUrl}/listUtilisateur`).pipe();
+    return this.http.get<any>('http://localhost:8080/api/utilisateur/listUtilisateur').pipe();
   }
+
 }

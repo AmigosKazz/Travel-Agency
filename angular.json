@@ -10,6 +10,22 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "AgenceVoyage:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "AgenceVoyage:build:production"
+            },
+            "development": {
+              "browserTarget": "AgenceVoyage:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
