@@ -1,6 +1,13 @@
+export interface Destination {
+  id_destination: number;
+  nom_destination: string;
+  prix_destination: number;
+}
+
+
 export interface ReservationManage {
   id_reservation: number;
-  nom_destination: string;
+  destination: Destination;
   prix_total: number;
   date_depart: string;
   date_retour: string;

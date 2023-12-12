@@ -18,9 +18,9 @@
       <tbody>
       <tr *ngFor="let reservationManage of reservationManages">
         <td> {{ reservationManage.id_reservation }} </td>
-        <td> {{ reservationManage.nom_destination }} </td>
-        <td> {{ reservationManage.date_depart }} </td>
-        <td> {{ reservationManage.date_retour }} </td>
+        <td> {{ reservationManage.destination.nom_destination }} </td>
+        <td> {{ reservationManage.date_depart | date: 'yyyy-MM-dd'  }} </td>
+        <td> {{ reservationManage.date_retour | date: 'yyyy-MM-dd' }}  </td>
         <td> {{ reservationManage.nombre_personne }} </td>
         <td> {{ reservationManage.prix_total }} </td>
 
