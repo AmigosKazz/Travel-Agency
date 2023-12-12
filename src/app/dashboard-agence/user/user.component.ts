@@ -34,6 +34,4 @@ public getUser(): void {
     this.diable = !this.diable;
   }
 
-
-
 }

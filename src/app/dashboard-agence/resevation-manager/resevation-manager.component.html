@@ -16,13 +16,13 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Row 1, Cell 1</td>
-        <td>Row 1, Cell 2</td>
-        <td>Row 1, Cell 3</td>
-        <td>Row 1, Cell 4</td>
-        <td>Row 1, Cell 5</td>
-        <td>Row 1, Cell 6</td>
+      <tr *ngFor="let reservationManage of reservationManages">
+        <td> {{ reservationManage.id_reservation }} </td>
+        <td> {{ reservationManage.nom_destination }} </td>
+        <td> {{ reservationManage.date_depart }} </td>
+        <td> {{ reservationManage.date_retour }} </td>
+        <td> {{ reservationManage.nombre_personne }} </td>
+        <td> {{ reservationManage.prix_total }} </td>
 
       </tr>
       </tbody>
