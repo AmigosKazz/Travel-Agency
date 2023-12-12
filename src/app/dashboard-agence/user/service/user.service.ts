@@ -15,5 +15,4 @@ export class UserService {
   public getUser() : Observable<User[]> {
     return this.http.get<any>('http://localhost:8080/api/utilisateur/listUtilisateur').pipe();
   }
-
 }
