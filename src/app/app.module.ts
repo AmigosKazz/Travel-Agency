@@ -22,6 +22,7 @@ import { AccueilDashboardComponent } from './dashboard-agence/accueil-dashboard/
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {MatIconModule} from "@angular/material/icon";
     AccueilDashboardComponent,
   ],
   imports: [
-    BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, MatDialogModule, MatButtonModule, MatIconModule
+    BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,
+    MatDialogModule, MatButtonModule, MatIconModule, MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent, AccueilComponent, VoirPlusComponent, FooterComponent, LoginComponent, ShowPageComponent, InscriptionComponent, ReservationComponent, DashboardAgenceComponent, NavbarComponent, ShowContentComponent, ResevationManagerComponent, TableauBordComponent, UserComponent, AccueilDashboardComponent]

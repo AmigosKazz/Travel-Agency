@@ -28,7 +28,7 @@ table.customTable {
   border-collapse: collapse;
   border-width: 0;
   border-color: #000000;
-  border-style: solid;
+  border-style: 1px solid #ddd;
   color: #000000;
 }
 
@@ -43,12 +43,10 @@ table.customTable td:hover {
   cursor: pointer;
 }
 
-
 table.customTable thead {
   background-color: #004F83;
   color: white;
 }
-
 .button{
   display: flex;
   justify-content: center;
