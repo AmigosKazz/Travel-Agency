@@ -11,6 +11,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class InscriptionComponent implements OnInit{
   roles = ['Agence de voyage','Visiteur'];
+  role_utilisateur: string | undefined;
 
   constructor(private inscriptionService: InscriptionService
               , private router: Router,

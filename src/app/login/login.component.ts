@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {LoginService} from "./service/login.service";
+import {Router} from "@angular/router";
+
+interface LoginResponse {
+  role: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -8,24 +13,28 @@ import {LoginService} from "./service/login.service";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  private router: any;
-  roles = ['Agence de voyage','Visiteur'];
 
-  constructor(private loginService: LoginService) {
-    
+  roles = ['Agence de voyage','Visiteur'];
+  role_utilisateur : string | undefined;
+
+  constructor(private loginService: LoginService, private route: Router) {
+
   }
-  
-  onSubmit(form : NgForm) {
-    if (form.valid) {
-      this.loginService.login(form.value).subscribe(
-          (response: any) => {
-          console.log(response);
-          this.router.navigate(['/']);
-        },
-          (error: any) => {
-          console.log(error);
+
+onSubmit(form: NgForm) {
+  if (form.valid) {
+    this.loginService.login(form.value).subscribe(
+      (response: any) => {
+        console.log(response);
+        if (response.status === 200) {
+          this.route.navigate(['/dashboard/user']);
         }
-      );
-    }
+      },
+      (error: any) => {
+        console.log(error);
+      }
+    );
   }
+}
+
 }

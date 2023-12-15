@@ -15,8 +15,8 @@
 
     <div class="form-group">
       <label for="role">Role :</label>
-      <select id="role" name="role_utilisateur" ngModel>
-        <option id="role-input" *ngFor="let role of roles" [value]="roles">{{role}}</option>
+      <select id="role" name="role_utilisateur" [(ngModel)]="role_utilisateur">
+        <option id="role-input" *ngFor="let role of roles" [value]="role">{{role}}</option>
       </select>
     </div>
 

@@ -9,6 +9,7 @@ import {ResevationManagerComponent} from "./dashboard-agence/resevation-manager/
 import {UserComponent} from "./dashboard-agence/user/user.component";
 import {TableauBordComponent} from "./dashboard-agence/tableau-bord/tableau-bord.component";
 import {AccueilDashboardComponent} from "./dashboard-agence/accueil-dashboard/accueil-dashboard.component";
+import {LoginService} from "./login/service/login.service";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,7 +19,7 @@ const routes: Routes = [
   { path: 'dashboard', component: ShowContentComponent,
     children: [
       { path: 'acceuil', component: AccueilDashboardComponent},
-      { path: 'tableau-bord', component: TableauBordComponent },
+      { path: 'tableau-bord', component: TableauBordComponent},
       { path: 'reservation', component: ResevationManagerComponent },
       { path: 'user', component: UserComponent}
     ]
@@ -36,4 +37,3 @@ const routes: Routes = [
 export class AppRoutingModule {
 
 }
-
