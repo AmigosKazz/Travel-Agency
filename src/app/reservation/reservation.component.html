@@ -4,39 +4,39 @@
     <img src="assets/icon/arrow-left.png" alt="logo" title="home" routerLink="/">
   </div>
 
-  <form #inscriptionForm="ngForm" (ngSubmit)="onSubmit(inscriptionForm)">
+  <form #reservationForm="ngForm" (ngSubmit)="onSubmit(reservationForm)">
 
     <h1 id="title_reserv">Reservation</h1>
     <div class="form-group">
       <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" ngModel>
+      <input type="text" id="name" name="utilisateur.nom_utilisateur" ngModel>
     </div>
 
     <div class="form-group">
       <label for="email">Email :</label>
-      <input type="email" id="email" name="email" ngModel>
+      <input type="email" id="email" name="utilisateur.email_utilisateur" ngModel>
     </div>
 
     <div class="form-group">
       <label for="destination">Destination :</label>
-      <select id="destination" name="destination" ngModel>
+      <select id="destination" name="destination.nom_destination" [(ngModel)]="selectedDestination">
         <option *ngFor="let destination of destinations" [value]="destination">{{destination}}</option>
       </select>
     </div>
 
     <div class="form-group">
       <label for="departureDate">Date de départ :</label>
-      <input type="date" id="departureDate" name="departureDate" ngModel>
+      <input type="date" id="departureDate" name="date_depart" ngModel>
     </div>
 
     <div class="form-group">
       <label for="arrivalDate">Date d'arrivée :</label>
-      <input type="date" id="arrivalDate" name="arrivalDate" ngModel>
+      <input type="date" id="arrivalDate" name="date_retour" ngModel>
     </div>
 
     <div class="form-group">
       <label for="numberOfPeople">Nombre de personnes :</label>
-      <input type="number" id="numberOfPeople" name="numberOfPeople" ngModel>
+      <input type="number" id="numberOfPeople" name="nombre_personne" ngModel>
     </div>
 
     <button type="submit">Reserver</button>

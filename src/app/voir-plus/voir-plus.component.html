@@ -36,6 +36,7 @@
     <div class="image-items" *ngFor="let image of paginatedListe">
       <h3> {{ image.title }} </h3>
       <p> {{ image.description }} </p>
+      <p> {{ image.prix_destination }} </p>
       <img [src]="image.imageUrl" alt=" {{ image.title }} ">
       <div class="hover-text">
         <a routerLink=""> En savoir plus... </a>

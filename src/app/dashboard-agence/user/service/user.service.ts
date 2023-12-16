@@ -11,7 +11,6 @@ export class UserService {
   private apiServerUrl = environment.apiBaseUrl;
 
   constructor( private http: HttpClient) {}
-
   public getUser() : Observable<User[]> {
     return this.http.get<any>('http://localhost:8080/api/utilisateur/listUtilisateur').pipe();
   }

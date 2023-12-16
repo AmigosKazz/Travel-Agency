@@ -8,14 +8,14 @@ export interface Utilisateur {
 
 export interface Destination {
   id_destination: number;
-  nom_destination: string;
-  description_destination: string;
+  nom_destination: string
   prix_destination: number;
 }
 export interface Reservation {
-   utilisateur: Utilisateur;
+    utilisateur: Utilisateur;
     destination: Destination;
     date_depart: Date;
     date_retour: Date;
     nombre_personne: number;
+    prix_total: number;
 }

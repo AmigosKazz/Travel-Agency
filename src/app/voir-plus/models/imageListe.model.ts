@@ -3,4 +3,5 @@ export class ImageListeModel{
   description !: string;
   imageUrl !: string;
   location !: string;
+  prix_destination !: string;
 }

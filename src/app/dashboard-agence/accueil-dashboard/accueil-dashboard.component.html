@@ -1,1 +1,52 @@
-<p>accueil-dashboard works!</p>
+<h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>id_destination</th>
+    <th>nom_destination</th>
+    <th>prix_destination</th>
+  </tr>
+  <tr *ngFor="let destination of destinations">
+    <td>{{destination.id_destination}}</td>
+    <td>{{destination.nom_destination}}</td>
+    <td>{{destination.prix_destination}}</td>
+  </tr>
+</table>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Ajouter une destination
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter une destination</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form -->
+        <form #destinationForm="ngForm" (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="id_destination" class="form-label">ID de destination</label>
+            <input type="text" class="form-control" id="id_destination" name="id_destination">
+          </div>
+          <div class="mb-3">
+            <label for="nom_destination" class="form-label">Nom de destination</label>
+            <input type="text" class="form-control" id="nom_destination" name="nom_destination">
+          </div>
+          <div class="mb-3">
+            <label for="prix_destination" class="form-label">Prix de destination</label>
+            <input type="text" class="form-control" id="prix_destination" name="prix_destination">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</div>

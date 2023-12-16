@@ -12,9 +12,9 @@ export class LoginService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-login(loginForm: any): Observable<any> {
-  return this.http.post(this.apiUrl, loginForm, { observe: 'response' });
-}
+  login(loginForm: any): Observable<any> {
+    return this.http.post(this.apiUrl, loginForm, { observe: 'response' });
+  }
 
 }
 
