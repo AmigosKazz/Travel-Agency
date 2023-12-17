@@ -15,7 +15,7 @@ export class DestinationService{
     return this.http.get<any>('http://localhost:8080/api/destination/listeDestination').pipe();
   }
 
-  public addDestination(destination: Destination) : Observable<Destination> {
-    return this.http.post<Destination>('http://localhost:8080/api/destination/ajouterDestination', destination);
+  public addDestination(destination: Destination) : Observable<Destination[]> {
+    return this.http.post<any>('http://localhost:8080/api/destination/ajouterDestination', destination);
   }
 }

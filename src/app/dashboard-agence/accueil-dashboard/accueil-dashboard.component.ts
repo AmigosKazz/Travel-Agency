@@ -10,6 +10,8 @@ import {NgForm} from "@angular/forms";
 })
 export class AccueilDashboardComponent implements OnInit{
   public destinations : Destination[] = [];
+  public destination: Destination = {nom_destination: '', prix_destination: 0}; // Add this line
+
 
   constructor(private destinationService : DestinationService) {}
 
@@ -23,9 +25,16 @@ export class AccueilDashboardComponent implements OnInit{
   }
 
   onSubmit(form: NgForm) {
+    const destination: Destination = {
+      nom_destination: form.value.nom_destination,
+      prix_destination: form.value.prix_destination
+    };
+
     this.destinationService.addDestination(form.value).subscribe(
       (response) => {
         console.log(response);
+        // Reload this page
+        window.location.reload();
       },
       (error) => {
         console.log(error);
@@ -37,5 +46,5 @@ export class AccueilDashboardComponent implements OnInit{
     this.getDestination();
   }
 
-  protected readonly onsubmit = onsubmit;
+  protected readonly NgForm = NgForm;
 }

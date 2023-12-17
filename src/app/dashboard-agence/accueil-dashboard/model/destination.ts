@@ -1,5 +1,5 @@
 export interface Destination{
-  id_destination:string;
-  nom_destination:string;
-  prix_destination:number;
+  id_destination?: number;
+  nom_destination: string;
+  prix_destination: number;
 }
