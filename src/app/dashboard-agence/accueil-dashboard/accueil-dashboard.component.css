@@ -14,3 +14,14 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+#edit {
+  margin-left: 2rem;
+  cursor: pointer;
+}
+#circle{
+  cursor: pointer;
+}
+#btn-ajout{
+  margin-left: 10rem;
+  margin-top: 3rem;
+}

@@ -42,6 +42,20 @@ export class AccueilDashboardComponent implements OnInit{
     );
   }
 
+  //apeller ici la fonction de suppression
+  deleteDestination(id_destination: number) {
+    this.destinationService.deleteDestination(id_destination).subscribe(
+      (response) => {
+        console.log(response);
+        // Reload this page
+        window.location.reload();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
   ngOnInit() {
     this.getDestination();
   }

@@ -18,4 +18,9 @@ export class DestinationService{
   public addDestination(destination: Destination) : Observable<Destination[]> {
     return this.http.post<any>('http://localhost:8080/api/destination/ajouterDestination', destination);
   }
+
+  public deleteDestination(id_destination: number) : Observable<Destination[]> {
+    return this.http.delete<any>('http://localhost:8080/api/destination/supprimerDestination/' + id_destination);
+  }
+
 }
