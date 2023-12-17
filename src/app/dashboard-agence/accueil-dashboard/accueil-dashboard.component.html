@@ -1,4 +1,4 @@
-<h2>HTML Table</h2>
+<h2 id="title">Liste de la Destination</h2>
 
 <table>
   <tr>
@@ -13,15 +13,48 @@
     <td>{{destination.prix_destination}}</td>
     <td id="action">
       <i class='bx bx-x-circle' id="circle" (click)="destination.id_destination && deleteDestination(destination.id_destination)"></i>
-      <i class='bx bx-edit' id="edit"></i>
+      <i class='bx bx-edit' id="edit" data-bs-toggle="modal" data-bs-target="#updateModal" (click)="loadDestination(destination)"></i>
     </td>
   </tr>
 </table>
+
+
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-ajout">
   Ajouter une destination
 </button>
 
+
+<!-- Update Modal -->
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateModalLabel">Mettre à jour une destination</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Update Form -->
+        <form #updateForm="ngForm" (ngSubmit)="destination.id_destination && updateDestination(destination.id_destination, updateForm)">
+          <div class="mb-3">
+            <label for="nom_destination" class="form-label">Nom de destination</label>
+            <input type="text" class="form-control" id="nom_dest" name="nom_destination" [(ngModel)]="destination.nom_destination" required>
+          </div>
+          <div class="mb-3">
+            <label for="prix_destination" class="form-label">Prix de destination</label>
+            <input type="number" class="form-control" id="prix_dest" name="prix_destination" [(ngModel)]="destination.prix_destination" required>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

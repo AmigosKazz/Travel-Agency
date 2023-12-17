@@ -56,8 +56,32 @@ export class AccueilDashboardComponent implements OnInit{
     );
   }
 
+  //modification by id ici
+  updateDestination(id_destination: number, form: NgForm) {
+    const destination: Destination = {
+      nom_destination: form.value.nom_destination,
+      prix_destination: form.value.prix_destination
+    };
+
+    this.destinationService.updateDestination(id_destination, form.value).subscribe(
+      (response) => {
+        console.log(response);
+        // Reload this page
+        window.location.reload();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
+
+  loadDestination(destination: Destination): void {
+    this.destination = destination;
+  }
+
   ngOnInit() {
     this.getDestination();
+
   }
 
   protected readonly NgForm = NgForm;

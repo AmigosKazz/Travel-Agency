@@ -23,4 +23,9 @@ export class DestinationService{
     return this.http.delete<any>('http://localhost:8080/api/destination/supprimerDestination/' + id_destination);
   }
 
+  //modification by id
+  public updateDestination(id_destination: number, destination: Destination) : Observable<Destination[]> {
+    return this.http.put<any>('http://localhost:8080/api/destination/modifierDestination/' + id_destination, destination);
+  }
+
 }
