@@ -1,38 +1,31 @@
 <div class="container">
   <div class="head">
     <h1>Liste de Reservation</h1>
-    <p>Table is a lightweight, minimalistic, responsive, mobile-friendly CSS layout.</p>
+    <p>Voici la table qui affiche la liste de la Reservation</p>
   </div>
   <div class="table">
-    <table class="customTable">
-      <thead>
-      <tr>
-        <th>Id_Reservation</th>
-        <th>Destination</th>
-        <th>date de depart</th>
-        <th>date de retour</th>
-        <th>Nombre de personne</th>
-        <th>Montant_total</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let reservationManage of reservationManages">
-        <td> {{ reservationManage.id_reservation }} </td>
-        <td> {{ reservationManage.destination.nom_destination }} </td>
-        <td> {{ reservationManage.date_depart | date: 'yyyy-MM-dd'  }} </td>
-        <td> {{ reservationManage.date_retour | date: 'yyyy-MM-dd' }}  </td>
-        <td> {{ reservationManage.nombre_personne }} </td>
-        <td> {{ reservationManage.prix_total }} </td>
-
-      </tr>
-      </tbody>
-    </table>
-
-  </div>
-
-  <div class="button">
-    <button type="button" class="btn-accepter">Accepter</button>
-    <button type="button" class="btn-refuser">Refuser</button>
+<table>
+  <tr>
+    <th>id_reservation</th>
+    <th>nom_utilisateur</th>
+    <th>email_utilisateur</th>
+    <th>date_depart</th>
+    <th>date_retour</th>
+    <th>nombre</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let reservation of reservationManages">
+    <td>{{reservation.id_reservation}}</td>
+    <td>{{reservation.nom_utilisateur}}</td>
+    <td>{{reservation.email_utilisateur}}</td>
+    <td>{{reservation.date_depart | date:'yyyy-MM-dd'}}</td>
+    <td>{{reservation.date_retour | date:'yyyy-MM-dd'}}</td>
+    <td>{{reservation.nombre_personne}}</td>
+    <td id="action">
+      <i class='bx bx-x-circle id="circle"'></i> <i class='bx bx-edit' id="edit"></i>
+    </td>
+  </tr>
+</table>
 
   </div>
 

@@ -10,6 +10,6 @@ export class ReservationManageService {
   constructor(private http: HttpClient) {}
 
   public getReservation(): Observable<ReservationManage[]> {
-    return this.http.get<any>('http://localhost:8080/api/reservation/listeReservation').pipe();
+    return this.http.get<any>('http://localhost:8080/api/reserve/listeReservation').pipe();
   }
 }

@@ -2,9 +2,8 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  gap: 5rem;
-  margin-top: 4rem;
-  overflow-x: hidden;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 .head{
   display: flex;
@@ -19,75 +18,25 @@
   font-weight: 700;
 }
 
-table.customTable {
-  width: 100%;
-  max-height: calc(4em * 5); /* 5 rows */
-  overflow-y: auto;
-  display: block;
-  background-color: rgba(193, 192, 192, 0.76);
+table {
+  font-family: arial, sans-serif;
   border-collapse: collapse;
-  border-width: 0;
-  border-color: #000000;
-  border-style: 1px solid #ddd;
-  color: #000000;
+  width: 100%;
+  margin: 5rem 0 0 10rem;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
 
-table.customTable td, table.customTable th {
-  border-width: 1px;
-  border-color: #000000;
-  border-style: solid;
-  padding: 1rem 2rem 1rem 2rem;
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
-table.customTable td:hover {
-  background-color: #B0B0B0;
+#edit {
+  margin-left: 1.5rem;
   cursor: pointer;
 }
-
-table.customTable thead {
-  background-color: #004F83;
-  color: white;
-}
-.button{
-  display: flex;
-  justify-content: center;
-}
-
-.btn-accepter{
-  background-color: #009d19;
-  border: none;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  font-weight: 700;
+#circle{
   cursor: pointer;
-  font-family: "JetBrains Mono Light", monospace;
-  width: 12%;
-  margin-top: 2rem;
-  margin-left: 4rem;
-}
-.btn-accepter:hover{
-  background-color: #014d0e;
-  color: white;
-  transition: 0.5s;
-}
-
-.btn-refuser{
-  background-color: #a90202;
-  border: none;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  cursor: pointer;
-  font-family: "JetBrains Mono Light", monospace;
-  width: 12%;
-  margin-top: 2rem;
-  margin-left: 4rem;
-}
-.btn-refuser:hover{
-  background-color: #871730;
-  color: white;
-  transition: 0.5s;
 }
