@@ -10,9 +10,11 @@ import {UserComponent} from "./dashboard-agence/user/user.component";
 import {TableauBordComponent} from "./dashboard-agence/tableau-bord/tableau-bord.component";
 import {AccueilDashboardComponent} from "./dashboard-agence/accueil-dashboard/accueil-dashboard.component";
 import {LoginService} from "./login/service/login.service";
+import {AccueilComponent} from "./accueil/accueil.component";
+import {AppComponent} from "./app.component";
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  {path: 'login', component: LoginComponent },
   { path: '', component: ShowPageComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'reservation', component: ReservationComponent},
