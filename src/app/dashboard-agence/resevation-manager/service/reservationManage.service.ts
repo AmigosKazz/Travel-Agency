@@ -24,5 +24,8 @@ export class ReservationManageService {
     return this.http.get<any>('http://localhost:8080/api/reserve/recherche/' + destination).pipe();
   }
 
+  sendEmail(id: number): Observable<any> {
+    return this.http.post<any>(`http://localhost:8080/api/reserve/confirmerReservation/${id}`, {});
+  }
 
 }

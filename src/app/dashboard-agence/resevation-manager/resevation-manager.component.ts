@@ -23,6 +23,13 @@ export class ResevationManagerComponent implements OnInit{
       });
   }
 
+  sendEmail(id: number): void {
+    this.reservationManageService.sendEmail(id).subscribe(response => {
+      console.log(response);
+      // handle the response
+    });
+  }
+
   ngOnInit(): void {
     this.getReservation();
 

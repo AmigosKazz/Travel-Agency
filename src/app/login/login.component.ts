@@ -27,7 +27,7 @@ onSubmit(form: NgForm) {
       (response: any) => {
         console.log(response);
         if (response.status === 200) {
-          this.route.navigate(['/dashboard/user']);
+          this.route.navigate(['dashboard/reservation']);
         }
       },
       (error: any) => {

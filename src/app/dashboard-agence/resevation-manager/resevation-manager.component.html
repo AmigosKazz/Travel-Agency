@@ -22,7 +22,8 @@
     <td>{{reservation.date_retour | date:'yyyy-MM-dd'}}</td>
     <td>{{reservation.nombre_personne}}</td>
     <td id="action">
-      <i class='bx bx-x-circle id="circle"'></i> <i class='bx bx-mail-send' id="mail"></i>
+      <i class='bx bx-x-circle id="circle"'></i>
+      <i class='bx bx-mail-send' id="mail" (click)="sendEmail(reservation.id_reservation)"></i>
     </td>
   </tr>
 </table>
