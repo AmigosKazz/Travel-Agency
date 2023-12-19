@@ -58,7 +58,7 @@ input[type="password"] {
   border: none;
   background-color: #eceaea;
   border-radius: 5px;
-  color: black;
+  color: green;
   padding-left: 1rem;
   font-weight: 600;
   border-bottom: 1px solid white;
@@ -68,10 +68,11 @@ input[type="password"] {
   width: 60%;
 }
 
-#role{
+#role[_ngcontent-ng-c964711815] {
   width: 60%;
   border: 1px solid #ccc;
   border-radius: 4px;
+  color: green;
 }
 
 button {
@@ -95,6 +96,16 @@ button:hover {
   transition: 0.5s;
 }
 
+button:disabled {
+  background-color: #024376; /* couleur de fond du bouton désactivé */
+  cursor: not-allowed; /* change le curseur en 'not-allowed' lorsque le bouton est désactivé */
+}
+
+button:disabled:hover {
+  background-color: #024376; /* couleur de fond du bouton désactivé lors du survol */
+  color: white; /* couleur du texte du bouton désactivé lors du survol */
+}
+
 .link{
   margin-left: 8rem;
   gap: 1rem;
@@ -110,4 +121,26 @@ button:hover {
     transition: 0.5s;
     text-decoration: none;
   }
+}
+
+.error-message {
+  color: red;
+}
+
+input[type="email"].ng-valid {
+  color: green;
+}
+
+input[type="email"].ng-invalid {
+  color: red;
+}
+input:valid {
+  color: green;
+}
+
+#successMess {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
 }

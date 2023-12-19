@@ -13,6 +13,8 @@ export class InscriptionComponent implements OnInit{
   roles = ['Agence de voyage','Visiteur'];
   role_utilisateur: string | undefined;
 
+  showSuccessMessage = false;
+
   constructor(private inscriptionService: InscriptionService
               , private router: Router,
               private snakeBar: MatSnackBar) {}
@@ -21,9 +23,12 @@ onSubmit(form: NgForm) {
   this.inscriptionService.sentInscription(form.value).subscribe(
     (response) => {
       console.log(response);
-      this.router.navigate(['/login']).then(r => console.log(r));
-      this.snakeBar.open("Inscription réussi", "OK",
-        {duration: 2000});
+      this.showSuccessMessage = true;
+      // navigate after 2s
+      setTimeout(() => {
+        this.router.navigate(['/login']);
+      }, 1000);
+
     },
     (error) => {
       console.log(error);

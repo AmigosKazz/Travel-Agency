@@ -12,6 +12,8 @@ export class AccueilDashboardComponent implements OnInit{
   public destinations : Destination[] = [];
   public destination: Destination = {nom_destination: '', prix_destination: 0}; // Add this line
 
+  showSuccessMessage = false;
+  showErrorMessage = false;
 
   constructor(private destinationService : DestinationService) {}
 
@@ -33,11 +35,16 @@ export class AccueilDashboardComponent implements OnInit{
     this.destinationService.addDestination(form.value).subscribe(
       (response) => {
         console.log(response);
-        // Reload this page
-        window.location.reload();
+        this.showSuccessMessage = true;
+        // Reload this page after 1s
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
+
       },
       (error) => {
         console.log(error);
+        this.showErrorMessage = true;
       }
     );
   }

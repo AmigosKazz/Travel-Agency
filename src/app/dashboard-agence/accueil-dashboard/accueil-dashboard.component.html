@@ -18,6 +18,12 @@
       </td>
     </tr>
   </table>
+  <div class="alert alert-success" role="alert" *ngIf="showSuccessMessage" id="successMess">
+    Votre Ajout est envoyée avec succès !
+  </div>
+
+  <div class="alert alert-danger" role="alert" *ngIf="showErrorMessage" id="errorMess">
+    Votre Ajout n'est pas envoyée !
 </div>
 
 
