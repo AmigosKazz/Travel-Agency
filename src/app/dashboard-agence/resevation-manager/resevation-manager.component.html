@@ -23,10 +23,30 @@
     <td>{{reservation.nombre_personne}}</td>
     <td id="action">
       <i class='bx bx-x-circle id="circle"'></i>
-      <i class='bx bx-mail-send' id="mail" (click)="sendEmail(reservation.id_reservation)"></i>
+      <i class='bx bx-mail-send' id="mail" data-bs-toggle="modal" data-bs-target="#confirmEmailModal" (click)="openModal(reservation)"></i>
     </td>
   </tr>
 </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmEmailModal" tabindex="-1" aria-labelledby="confirmEmailModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmEmailModalLabel">Confirmation de réservation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Êtes-vous sûr de vouloir confirmer cette réservation et envoyer l'e-mail de confirmation ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-primary" (click)="reservation && sendEmail(reservation.id_reservation)">Confirmer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   </div>
 

@@ -10,7 +10,6 @@ export class ReservationManageService {
 
   private reservationsSubject = new BehaviorSubject<ReservationManage[]>([]);
   reservations$ = this.reservationsSubject.asObservable();
-
   setReservations(reservations: ReservationManage[]) {
     this.reservationsSubject.next(reservations);
   }
