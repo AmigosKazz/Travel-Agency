@@ -8,11 +8,10 @@
       <div class="menu-items"><a routerLink="reservation" >RESERVATION</a></div>
       <div class="menu-items"><a (click)="scrollToElement('footer')">CONTACT</a></div>
     </div>
-    <div class="recherche" data-aos="fade-left"
-         data-aos-duration="1000">
-      <input type="search" placeholder="search...">
-      <button type="submit"><i class='bx bx-search'></i></button>
-    </div>
+      <div class="recherche" data-aos="fade-left" data-aos-duration="1000">
+        <input type="search" [(ngModel)]="searchService.searchTerm" placeholder="search...">
+        <button type="submit" (click)="searchService.search()"><i class='bx bx-search'></i></button>
+      </div>
     <div class="login" data-aos="fade-left"
          data-aos-duration="1000">
       <button class="btn-login" routerLink="login" >Login</button>

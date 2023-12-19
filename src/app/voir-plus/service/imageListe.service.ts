@@ -91,4 +91,5 @@ export class ImageListeService{
       prix_destination: '507 000 Ar'
     }
   ];
+
 }

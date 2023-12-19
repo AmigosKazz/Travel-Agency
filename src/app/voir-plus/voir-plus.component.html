@@ -31,24 +31,22 @@
   </h1>
   <img src="../../assets/ilustration/maki.png" alt="" id="icon-maki" data-aos="fade-up">
 
-  <div class="container-image" data-aos="fade-up"
-       data-aos-anchor-placement="top-center">
-    <div class="image-items" *ngFor="let image of paginatedListe">
-      <h3> {{ image.title }} </h3>
-      <p> {{ image.description }} </p>
-      <p> {{ image.prix_destination }} </p>
-      <img [src]="image.imageUrl" alt=" {{ image.title }} ">
-      <div class="hover-text">
-        <a routerLink=""> En savoir plus... </a>
-      </div>
-      <p> Emplacement : {{ image.location }} </p>
+<div class="container-image" data-aos="fade-up" data-aos-anchor-placement="top-center">
+  <div class="image-items" *ngFor="let image of searchService.paginatedListe">
+    <h3> {{ image.title }} </h3>
+    <p> {{ image.description }} </p>
+    <p> {{ image.prix_destination }} </p>
+    <img [src]="image.imageUrl" alt=" {{ image.title }} ">
+    <div class="hover-text">
+      <a routerLink=""> En savoir plus... </a>
     </div>
-
+    <p> Emplacement : {{ image.location }} </p>
   </div>
+</div>
 
   <div class="pagination">
-    <img src="assets/icon/left.png" (click)="previousPage()" >
-    <img src="assets/icon/right.png" (click)="nextPage()">
+    <img src="assets/icon/left.png" (click)="searchService.previousPage()" >
+    <img src="assets/icon/right.png" (click)="searchService.nextPage()">
   </div>
 
 </div>

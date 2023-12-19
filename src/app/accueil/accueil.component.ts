@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {SearchService} from "../voir-plus/service/searchService";
 
 @Component({
   selector: 'app-accueil',
@@ -23,6 +24,10 @@ export class AccueilComponent implements OnInit{
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  constructor(public searchService: SearchService, ) {}
+
+
   ngOnInit() {
 
   }
