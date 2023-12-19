@@ -33,7 +33,7 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-#edit {
+#mail {
   margin-left: 1.5rem;
   cursor: pointer;
 }
