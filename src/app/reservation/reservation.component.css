@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  height: 105vh;
   width: 100%;
   overflow-y: hidden;
 }
@@ -70,7 +70,7 @@ input[type="number"] {
   border: none;
   background-color: #eceaea;
   border-radius: 5px;
-  color: black;
+  color: green;
   padding-left: 1rem;
   font-weight: 600;
   border-bottom: 1px solid white;
@@ -104,10 +104,11 @@ button:hover {
   color: #024376;
   transition: 0.5s;
 }
-#destination{
+#destination[_ngcontent-ng-c2321305981] {
   width: 95%;
   border: 1px solid #ccc;
   border-radius: 4px;
+  color: green;
 }
 
 #successMess{
@@ -116,3 +117,28 @@ button:hover {
   top: 1rem;
   right: 0;
 }
+button:disabled {
+  background-color: #024376; /* couleur de fond du bouton désactivé */
+  cursor: not-allowed; /* change le curseur en 'not-allowed' lorsque le bouton est désactivé */
+}
+
+button:disabled:hover {
+  background-color: #024376; /* couleur de fond du bouton désactivé lors du survol */
+  color: white; /* couleur du texte du bouton désactivé lors du survol */
+}
+input[type="email"].ng-valid {
+  color: green;
+}
+
+input[type="email"].ng-invalid {
+  color: red;
+}
+
+.error-message {
+  color: red;
+}
+
+input:valid {
+  color: green;
+}
+
