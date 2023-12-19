@@ -115,6 +115,64 @@ input::placeholder {
   text-transform: uppercase;
 }
 
+.container-image {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 2vw;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+.image-items {
+  /* Ajoutez vos règles CSS ici */
+  box-sizing: border-box;
+  width: 30%;
+  height: 22vw;
+  margin: 2rem auto;
+  overflow: hidden;
+  text-align: center;
+  background-color: #8d8d8d;
+}
+
+.image-items img {
+  width: 100%;
+  margin-top: 1.2rem;
+  cursor: pointer;
+}
+
+.image-items img:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+  filter: blur(2px);
+}
+
+.image-items h3, .image-items p {
+  font-family: 'Abel', sans-serif;
+  color: #dad7d7;
+  margin-top: 1rem;
+  text-shadow: 9px -1px 6px rgba(0,0,0,0.61);
+}
+
+.image-items h3 {
+  font-size: 1.5vw;
+}
+
+.image-items p {
+  font-size: 1.2vw;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.pagination img{
+  width: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1285px){
   #text-acceuil p{
     font-size: 3.7vw;

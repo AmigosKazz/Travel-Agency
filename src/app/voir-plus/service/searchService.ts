@@ -21,14 +21,16 @@ export class SearchService {
   }
 
 
-  search(): void {
-    if (this.searchTerm) {
-      this.filteredListe = this.imageListe.filter(image => image.title.toLowerCase().includes(this.searchTerm.toLowerCase()));
-    } else {
-      this.filteredListe = [...this.imageListe];
-    }
-    this.paginate();
+search(): void {
+  if (this.searchTerm) {
+    this.filteredListe = this.imageListe.filter(image =>
+      image.title.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  } else {
+    this.filteredListe = [...this.imageListe];
   }
+  this.paginate();
+}
 
   paginate(): void {
     const start = this.pageIndex * this.pageSize;

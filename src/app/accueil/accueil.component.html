@@ -19,12 +19,28 @@
 
   </div>
 
-  <div id="text-acceuil">
-    <p data-aos="fade-right"
-       data-aos-offset="100"
-       data-aos-easing="ease-in-sine">
-      Découvrez la richesse culturelle et naturelle de Madagascar, un paradis à explorer.    </p>
+  <div id="text-acceuil" *ngIf="searchService.searchTerm === ''">
+  <p data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
+    Découvrez la richesse culturelle et naturelle de Madagascar, un paradis à explorer.
+  </p>
+</div>
+
+<div class="container-image" data-aos="fade-up" data-aos-anchor-placement="top-center" *ngIf="searchService.searchTerm !== ''">
+  <div class="image-items" *ngFor="let image of searchService.paginatedListe">
+    <h3> {{ image.title }} </h3>
+    <p> {{ image.description }} </p>
+    <p> {{ image.prix_destination }} </p>
+    <img [src]="image.imageUrl" alt=" {{ image.title }} ">
+    <div class="hover-text">
+      <a routerLink=""> En savoir plus... </a>
+    </div>
+    <p> Emplacement : {{ image.location }} </p>
   </div>
+</div>
+  <div class="pagination" *ngIf="searchService.searchTerm !== ''">
+    <img src="assets/icon/left.png" (click)="searchService.previousPage()" >
+    <img src="assets/icon/right.png" (click)="searchService.nextPage()">
+</div>
 
   <img class="scroll-to-top" src="assets/icon/up.png" (click)="scrollToElement('container')" *ngIf="showScrollToTop" >
 </div>
