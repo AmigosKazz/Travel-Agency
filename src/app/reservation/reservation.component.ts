@@ -20,6 +20,8 @@ export class ReservationComponent implements OnInit{
   destinations: Destination[] = [];
   selectedDestination: Destination = {id_destination: 0, nom_destination: ''};
 
+  showSuccessMessage = false;
+
   constructor(private reservationService : ReservationService, private route : Router, private snakeBar: MatSnackBar) { }
 
   onSubmit(form: NgForm) {
@@ -28,12 +30,15 @@ export class ReservationComponent implements OnInit{
       if (this.selectedDestination) {
         formData.destination = this.selectedDestination.nom_destination;
       }
+
+      this.showSuccessMessage = true;
+      setTimeout(() => this.showSuccessMessage = false, 2000); // hide the alert after 2 seconds
+
       this.reservationService.addReservation(formData).subscribe(
         (response :any) => {
           console.log(response);
-          this.route.navigate(['/']).then(r => console.log(r));
-          this.snakeBar.open("Reservation réussi", "OK",
-            {duration: 2000});
+          //reload the page after 1.5 seconds
+          setTimeout(() => window.location.reload(), 1500);
         },
         (error : any) => {
           console.log(error);

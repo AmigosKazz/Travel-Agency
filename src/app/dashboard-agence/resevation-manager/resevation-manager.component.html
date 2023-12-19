@@ -22,14 +22,14 @@
     <td>{{reservation.date_retour | date:'yyyy-MM-dd'}}</td>
     <td>{{reservation.nombre_personne}}</td>
     <td id="action">
-      <i class='bx bx-x-circle id="circle"'></i>
+      <i class='bx bx-x-circle id="circle"' data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal" (click)="openModal(reservation)"></i>
       <i class='bx bx-mail-send' id="mail" data-bs-toggle="modal" data-bs-target="#confirmEmailModal" (click)="openModal(reservation)"></i>
     </td>
   </tr>
 </table>
 
     <!-- Modal -->
-    <div class="modal fade" id="confirmEmailModal" tabindex="-1" aria-labelledby="confirmEmailModalLabel" aria-hidden="true">
+    <div class="modal fade" id="confirmEmailModal" tabindex="-1" aria-labelledby="confirmEmailModalLabel" aria-hidden="true" #confirmEmailModal>
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -47,7 +47,29 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirmation de suppression</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Êtes-vous sûr de vouloir supprimer cette réservation ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-danger" (click)="reservation && deleteReservation(reservation.id_reservation)">Supprimer</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+  </div>
+
+  <div class="alert alert-success" role="alert" *ngIf="emailSent">
+    Votren mail est envoyé avec succès !
   </div>
 
 </div>

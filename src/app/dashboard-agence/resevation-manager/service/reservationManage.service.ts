@@ -27,4 +27,8 @@ export class ReservationManageService {
     return this.http.post<any>(`http://localhost:8080/api/reserve/confirmerReservation/${id}`, {});
   }
 
+  deleteReservation(id: number): Observable<any> {
+    return this.http.delete<any>(`http://localhost:8080/api/reserve/deleteReservation/${id}`);
+  }
+
 }

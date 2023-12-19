@@ -5,6 +5,7 @@
   align-items: flex-start;
   height: 100vh;
   width: 100%;
+  overflow-y: hidden;
 }
 .logo{
   display: flex;
@@ -107,4 +108,11 @@ button:hover {
   width: 95%;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+#successMess{
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 0;
 }
