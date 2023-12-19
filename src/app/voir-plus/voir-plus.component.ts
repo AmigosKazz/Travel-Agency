@@ -39,8 +39,6 @@ export class VoirPlusComponent implements OnInit {
     this.imageListe = this.imageListeservice.imageListe;
   }
 
-
-
   ngOnInit() {
     AOS.init();
 

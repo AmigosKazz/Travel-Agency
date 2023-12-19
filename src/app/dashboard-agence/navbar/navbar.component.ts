@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {SearchService} from "./service/searchService";
 
 @Component({
   selector: 'app-navbar',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
   isOpen = true;
+
+  constructor(public searchService: SearchService) {}
 }

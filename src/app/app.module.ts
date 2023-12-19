@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { LoginComponent } from './login/login.component';
 import { ShowPageComponent } from './show-page/show-page.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { InscriptionComponent } from './inscription/inscription.component';
 import { ReservationComponent } from './reservation/reservation.component';
@@ -45,7 +45,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,
-    MatDialogModule, MatButtonModule, MatIconModule, MatSnackBarModule
+    MatDialogModule, MatButtonModule, MatIconModule, MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, AccueilComponent, VoirPlusComponent, FooterComponent, LoginComponent, ShowPageComponent, InscriptionComponent, ReservationComponent, DashboardAgenceComponent, NavbarComponent, ShowContentComponent, ResevationManagerComponent, TableauBordComponent, UserComponent, AccueilDashboardComponent]

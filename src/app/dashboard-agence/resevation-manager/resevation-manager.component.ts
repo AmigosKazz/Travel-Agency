@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ReservationManage} from "./model/reservationManage";
 import {ReservationManageService} from "./service/reservationManage.service";
+import {FormControl} from "@angular/forms";
+import {debounceTime, distinctUntilChanged, switchMap} from "rxjs";
 
 @Component({
   selector: 'app-resevation-manager',
@@ -10,6 +12,7 @@ import {ReservationManageService} from "./service/reservationManage.service";
 export class ResevationManagerComponent implements OnInit{
 
   public reservationManages: ReservationManage[] = [];
+
   constructor(private reservationManageService : ReservationManageService) {}
 
   public getReservation(): void {
@@ -22,5 +25,10 @@ export class ResevationManagerComponent implements OnInit{
 
   ngOnInit(): void {
     this.getReservation();
+
+    this.reservationManageService.reservations$.subscribe((reservations: ReservationManage[]) => {
+      this.reservationManages = reservations;
+    });
   }
+
 }

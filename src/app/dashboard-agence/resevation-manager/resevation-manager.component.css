@@ -22,7 +22,10 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  margin: 5rem 0 0 10rem;
+  margin: 3rem 0 0 10rem;
+  max-height: 440px;
+  overflow-y: scroll;
+  display: block;
 }
 td, th {
   border: 1px solid #dddddd;

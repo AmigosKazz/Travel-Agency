@@ -1,22 +1,25 @@
 <h2 id="title">Liste de la Destination</h2>
 
-<table>
-  <tr>
-    <th>id_destination</th>
-    <th>nom_destination</th>
-    <th>prix_destination</th>
-    <th>Actions</th>
-  </tr>
-  <tr *ngFor="let destination of destinations">
-    <td>{{destination.id_destination}}</td>
-    <td>{{destination.nom_destination}}</td>
-    <td>{{destination.prix_destination}}</td>
-    <td id="action">
-      <i class='bx bx-x-circle' id="circle" (click)="destination.id_destination && deleteDestination(destination.id_destination)"></i>
-      <i class='bx bx-edit' id="edit" data-bs-toggle="modal" data-bs-target="#updateModal" (click)="loadDestination(destination)"></i>
-    </td>
-  </tr>
-</table>
+<div class="table">
+  <table>
+    <tr>
+      <th>id_destination</th>
+      <th>nom_destination</th>
+      <th>prix_destination</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let destination of destinations">
+      <td>{{destination.id_destination}}</td>
+      <td>{{destination.nom_destination}}</td>
+      <td>{{destination.prix_destination}}</td>
+      <td id="action">
+        <i class='bx bx-x-circle' id="circle" (click)="destination.id_destination && deleteDestination(destination.id_destination)"></i>
+        <i class='bx bx-edit' id="edit" data-bs-toggle="modal" data-bs-target="#updateModal" (click)="loadDestination(destination)"></i>
+      </td>
+    </tr>
+  </table>
+</div>
+
 
 
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-ajout">

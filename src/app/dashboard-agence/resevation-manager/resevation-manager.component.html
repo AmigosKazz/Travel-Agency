@@ -6,7 +6,7 @@
   <div class="table">
 <table>
   <tr>
-    <th>id_reservation</th>
+    <th>Destination</th>
     <th>nom_utilisateur</th>
     <th>email_utilisateur</th>
     <th>date_depart</th>
@@ -15,7 +15,7 @@
     <th>Actions</th>
   </tr>
   <tr *ngFor="let reservation of reservationManages">
-    <td>{{reservation.id_reservation}}</td>
+    <td>{{reservation.destination}}</td>
     <td>{{reservation.nom_utilisateur}}</td>
     <td>{{reservation.email_utilisateur}}</td>
     <td>{{reservation.date_depart | date:'yyyy-MM-dd'}}</td>

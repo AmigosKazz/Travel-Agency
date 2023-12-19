@@ -1,8 +1,15 @@
+.table {
+
+}
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
   margin: 5rem 0 0 10rem;
+  max-height: 440px;
+  overflow-y: scroll;
+  display: block;
 }
 
 #title {
@@ -14,11 +21,11 @@ table {
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 15px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #d1d1d1;
 }
 #edit {
   margin-left: 2rem;

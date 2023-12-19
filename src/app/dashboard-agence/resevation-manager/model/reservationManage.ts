@@ -1,7 +1,7 @@
 
 
 export interface ReservationManage {
-  id_reservation: number;
+  destination: number;
   nom_utilisateur: string;
   email_utilisateur: string;
   prix_total: number;

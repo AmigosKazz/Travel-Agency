@@ -6,8 +6,8 @@
   </div>
   <ul class="nav-list">
     <li>
-        <i class="bx bx-search" (click)="isOpen = !isOpen" ></i>
-        <input type="text" placeholder="Search..." />
+      <i class="bx bx-search" (click)="isOpen = !isOpen" ></i>
+      <input type="text" placeholder="Search..." [formControl]="searchService.searchControl" />
       <span class="tooltip">Search</span>
     </li>
     <li>
