@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import {Destination} from "./model/destination";
 import {DestinationService} from "./service/destinationService";
 import {NgForm} from "@angular/forms";
+import { ViewChild } from '@angular/core';
+import * as bootstrap from "bootstrap";
 
 @Component({
   selector: 'app-accueil-dashboard',
@@ -9,9 +11,14 @@ import {NgForm} from "@angular/forms";
   styleUrls: ['./accueil-dashboard.component.css']
 })
 export class AccueilDashboardComponent implements OnInit{
+
+  @ViewChild('closebutton') exampleModal!: ElementRef;
+
   public destinations : Destination[] = [];
   public destination: Destination = {nom_destination: '', prix_destination: 0}; // Add this line
 
+  showSuccessMessage= false;
+  showErrorMessage= false;
 
   constructor(private destinationService : DestinationService) {}
 
@@ -33,11 +40,15 @@ export class AccueilDashboardComponent implements OnInit{
     this.destinationService.addDestination(form.value).subscribe(
       (response) => {
         console.log(response);
-        // Reload this page
-        window.location.reload();
+        // show and hide alert after 1 seconds
+        this.showSuccessMessage = true;
+        setTimeout(() => this.showSuccessMessage = false, 1000);
+        //reload after 1.6 seconds
+        setTimeout(() => window.location.reload(), 1600);
       },
       (error) => {
         console.log(error);
+        this.showErrorMessage = true;
       }
     );
   }

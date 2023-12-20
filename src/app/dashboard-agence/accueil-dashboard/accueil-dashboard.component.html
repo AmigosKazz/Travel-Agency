@@ -21,10 +21,17 @@
 </div>
 
 
-
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-ajout">
   Ajouter une destination
 </button>
+
+<div class="alert alert-success" role="alert" *ngIf="showSuccessMessage" id="successMess">
+  Votre Ajout est envoyée avec succès !
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="showErrorMessage" id="errorMess">
+  Votre Ajout n'est pas envoyée !
+</div>
 
 
 <!-- Update Modal -->
@@ -80,7 +87,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            <button type="submit" class="btn btn-primary">Enregistrer</button>
+            <button type="submit" class="btn btn-primary" [disabled]="destinationForm.invalid">Enregistrer</button>
           </div>
         </form>
       </div>
