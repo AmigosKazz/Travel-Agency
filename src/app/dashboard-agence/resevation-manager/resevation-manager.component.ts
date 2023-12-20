@@ -13,6 +13,9 @@ export class ResevationManagerComponent implements OnInit{
   public reservationManages: ReservationManage[] = [];
   public reservation: ReservationManage | undefined;
   emailSent = false;
+  emailError = false;
+  showSuccessMessageDelete = false;
+  showErrorMessageDelete = false;
 
   constructor(private reservationManageService : ReservationManageService) {}
 
@@ -32,24 +35,35 @@ export class ResevationManagerComponent implements OnInit{
   }
 
 
-  sendEmail(id: number): void {
-    this.reservationManageService.sendEmail(id).subscribe(response => {
-      console.log(response);
-      this.emailSent = true;
-      setTimeout(() => this.emailSent = false, 2000); // hide the alert after 2 seconds
-      //close the modal
-      document.getElementById('confirmEmailModal')?.click();
-    });
+async sendEmail(id: number): Promise<void> {
+  try {
+    const response = await this.reservationManageService.sendEmail(id).toPromise();
+    console.log(response);
+    this.emailSent = true;
+    setTimeout(() => this.emailSent = false, 1000); // hide the alert after 1 seconds
+    //close the modal
+    document.getElementById('confirmEmailModal')?.click();
+  } catch (error) {
+    console.error('An error occurred:', error);
+    this.emailError = true;
+    setTimeout(() => this.emailError = false, 1000); // hide the alert after 1 seconds
   }
+}
 
-  deleteReservation(id: number): void {
-    this.reservationManageService.deleteReservation(id).subscribe(response => {
-      console.log(response);
-      //hide the modal
-      document.getElementById('deleteConfirmationModal')?.click();
-      window.location.reload();
-    });
+async deleteReservation(id: number): Promise<void> {
+  try {
+    const response = await this.reservationManageService.deleteReservation(id).toPromise();
+    console.log(response);
+    this.showSuccessMessageDelete = true;
+    setTimeout(() => this.showSuccessMessageDelete = false, 1000); // hide the alert after 1 seconds
+    // reload page after 1.5 second
+    setTimeout(() => window.location.reload(), 1500);
+  } catch (error) {
+    console.error('An error occurred:', error);
+    this.showErrorMessageDelete = true;
+    setTimeout(() => this.showErrorMessageDelete = false, 1000); // hide the alert after 1 seconds
   }
+}
 
   ngOnInit(): void {
     this.getReservation();

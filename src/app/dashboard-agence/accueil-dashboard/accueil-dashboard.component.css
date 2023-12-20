@@ -38,3 +38,16 @@ tr:nth-child(even) {
   margin-left: 10rem;
   margin-top: 3rem;
 }
+
+#successMess{
+  display: block;
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+}
+#errorMess{
+  display: block;
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+}

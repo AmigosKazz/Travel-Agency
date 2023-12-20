@@ -11,6 +11,11 @@ export class AccueilComponent implements OnInit{
 
   showScrollToTop = false;
 
+  //reload page if click on logo
+  reloadPage() {
+    window.location.reload();
+  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.showScrollToTop = !!(window.scrollY || document.documentElement.scrollTop || document.body.scrollTop > 600);

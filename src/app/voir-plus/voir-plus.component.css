@@ -107,7 +107,7 @@
   position: relative;
   box-sizing: border-box;
   width: 30%;
-  height: 22vw;
+  height: 23vw;
   margin: 2rem auto;
   overflow: hidden;
   text-align: center;
@@ -116,6 +116,7 @@
 
 .image-items img{
     width: 100%;
+    height: 19vw;
     margin-top: 1.2rem;
     cursor: pointer;
 }
@@ -189,4 +190,3 @@
     font-size: 1.9vw;
   }
 }
-

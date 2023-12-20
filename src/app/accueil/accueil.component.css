@@ -26,6 +26,10 @@
   min-width: 100% ;
 }
 
+.accueil img{
+  cursor: pointer;
+}
+
 .menu{
   display: flex;
   gap: 2rem;
