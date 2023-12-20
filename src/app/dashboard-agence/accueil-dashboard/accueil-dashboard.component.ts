@@ -49,6 +49,7 @@ export class AccueilDashboardComponent implements OnInit{
       (error) => {
         console.log(error);
         this.showErrorMessage = true;
+        setTimeout(() => this.showErrorMessage = false, 1000);
       }
     );
   }
@@ -58,11 +59,15 @@ export class AccueilDashboardComponent implements OnInit{
     this.destinationService.deleteDestination(id_destination).subscribe(
       (response) => {
         console.log(response);
-        // Reload this page
-        window.location.reload();
+        this.showSuccessMessage = true;
+        setTimeout(() => this.showSuccessMessage = false, 1000);
+        // Reload this page after 1.5 seconds
+        setTimeout(() => window.location.reload(), 1500);
       },
       (error) => {
         console.log(error);
+        this.showErrorMessage = true;
+        setTimeout(() => this.showErrorMessage = false, 1000);
       }
     );
   }
@@ -77,11 +82,15 @@ export class AccueilDashboardComponent implements OnInit{
     this.destinationService.updateDestination(id_destination, form.value).subscribe(
       (response) => {
         console.log(response);
-        // Reload this page
-        window.location.reload();
+        this.showSuccessMessage = true;
+        setTimeout(() => this.showSuccessMessage = false, 1000);
+        // Reload this page after 1.5 seconds
+        setTimeout(() => window.location.reload(), 1500);
       },
       (error) => {
         console.log(error);
+        this.showErrorMessage = true;
+        setTimeout(() => this.showErrorMessage = false, 1000);
       }
     );
   }

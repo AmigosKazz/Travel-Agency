@@ -43,3 +43,16 @@ tr:nth-child(even) {
 #circle{
   cursor: pointer;
 }
+
+#successMess ,#successDelete{
+  display: block;
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+}
+#errorMess, #errorDelete {
+  display: block;
+  position: relative;
+  top: 1rem;
+  right: 2rem;
+}

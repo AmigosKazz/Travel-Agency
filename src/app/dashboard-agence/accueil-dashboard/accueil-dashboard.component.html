@@ -26,11 +26,19 @@
 </button>
 
 <div class="alert alert-success" role="alert" *ngIf="showSuccessMessage" id="successMess">
-  Votre Ajout est envoyée avec succès !
+  Votre requete est envoyée avec succès !
 </div>
 
 <div class="alert alert-danger" role="alert" *ngIf="showErrorMessage" id="errorMess">
-  Votre Ajout n'est pas envoyée !
+  Votre requete n'est pas envoyée !
+</div>
+
+<div class="alert alert-success" role="alert" *ngIf="showSuccessMessage" id="successDelete">
+  Votre requete est supprimée avec succès !
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="showErrorMessage" id="errorDelete">
+  Votre requete n'est pas supprimée !
 </div>
 
 

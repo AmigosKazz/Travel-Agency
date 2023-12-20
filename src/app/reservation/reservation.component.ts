@@ -21,6 +21,7 @@ export class ReservationComponent implements OnInit{
   selectedDestination: Destination = {id_destination: 0, nom_destination: ''};
 
   showSuccessMessage = false;
+  showErrorMessage = false;
 
   constructor(private reservationService : ReservationService, private route : Router, private snakeBar: MatSnackBar) { }
 
@@ -42,6 +43,7 @@ export class ReservationComponent implements OnInit{
         },
         (error : any) => {
           console.log(error);
+          this.showErrorMessage = true;
         });
     }
   }
